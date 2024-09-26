@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Website</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f0f0f0;
+            height: 100vh;
+        }
+
+        /* Header with video background */
+        header {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text readability */
+            z-index: 1;
+        }
+
+        header h3 {
+            font-size: 36px;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            margin-top: 150px;
+            text-align: center;
+            z-index: 2;
+            color: white;
+            position: relative;
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #003366;
+            border-radius: 5px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #002244;
+        }
+
+        /* Main content */
+        .main-content {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            z-index: 1;
+        }
+
+        .featured-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .featured-images img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #cc6600;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #004d99;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Video background -->
+        <video autoplay muted loop playsinline class="video-background">
+            <source src="wedvid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+
+        <!-- Navigation menu -->
+        <nav>
+            <a href="about.html">About Us</a>
+            <a href="destination.html">Destinations</a>
+            <a href="Events.html">Events</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+             <a href="login1.html">Login</a>
+     
+        </nav>
+
+        <!-- Header title with language switch -->
+        <h3>
+            <span id="title-en">बुंदेलखंड: जहां इतिहास की धरोहरें जीवंत होती हैं</span><br>
+            <span id="title-other" style="display:none;">"Bundelkhand: Where the Heritage of History Comes Alive"</span>
+        </h3>
+    </header>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <h1>Welcome to Our  destination wedding  Website </h1>
+        <p>Explore beautiful destinations and plan your perfect trip with us.</p>
+
+        <div class="featured-images">
+            <img src="Kalinjar_fort11.jpg" alt="Destination 1">
+            <img src="121.jpg" alt="Destination 2">
+            <img src="122.jpeg" alt="Destination 3">
+        </div>
+    </div>
+
+    <script>
+        // Language switch functionality
+        let currentLanguage = 'en';
+        setInterval(() => {
+            if (currentLanguage === 'en') {
+                document.getElementById('title-en').style.display = 'none';
+                document.getElementById('title-other').style.display = 'block';
+                currentLanguage = 'other';
+            } else {
+                document.getElementById('title-en').style.display = 'block';
+                document.getElementById('title-other').style.display = 'none';
+                currentLanguage = 'en';
+            }
+        }, 5000);
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tourism Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
