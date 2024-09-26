@@ -1,0 +1,190 @@
+<style>
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background: url('https://www.weddingsutra.com/images/Vendor_Images/Catering/gyanjee-caterers/gyanjee-caterers-10.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+}
+
+.header-content h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.header-content p {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Curved Section Divider */
+.section-divider {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, #d53369, #daae51);
+    clip-path: ellipse(50% 100% at 50% 100%);
+}
+
+/* Caterers Section */
+.caterers {
+    padding: 100px 0;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 300;
+}
+
+.caterer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.caterer-card {
+    background-color: #fdfdfd;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.caterer-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.caterer-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.caterer-image-wrapper img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.caterer-card:hover img {
+    transform: scale(1.1);
+}
+
+.caterer-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.caterer-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #d53369;
+}
+
+.caterer-info p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: linear-gradient(120deg, #d53369, #daae51);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(120deg, #daae51, #d53369);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+    font-weight: 300;
+    opacity: 0.8;
+}
+/* Caterer Overview and Rating Styling */
+.caterer-overview {
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.caterer-overview p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.rating {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #d53369;
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    color: #ffd700; /* Gold star color */
+    margin-left: 5px;
+    font-size: 1.2rem;
+}
+
+.rating span:last-child {
+    margin-left: 10px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+
+</style>

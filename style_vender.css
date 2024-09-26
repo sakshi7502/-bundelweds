@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8e1; /* Soft background for warmth */
+}
+
+header {
+    background: linear-gradient(135deg, #ff4081, #ff6f61);
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #ff1744; /* Bright accent border */
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    font-family: 'Georgia', serif; /* Elegant font */
+    letter-spacing: 2px; /* Increased letter spacing */
+}
+
+.vendor-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    gap: 30px; /* Space between items */
+}
+
+.category {
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    padding: 30px; /* Increased padding for larger icons */
+    width: 220px; /* Increased width */
+    height: 220px; /* Increased height */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.category h2 {
+    font-size: 1.6rem; /* Font size for category names */
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Specific background images for each category */
+.photographers {
+    background-image: url('Photographers.jfif');
+}
+
+.caterers {
+    background-image: url('Caterers.jpg');
+}
+
+.venues {
+    background-image: url('Venues.jpg');
+}
+
+.florists {
+    background-image: url('Florists.jpeg');
+}
+
+.musicians {
+    background-image: url('Musicians.jpg');
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff4081, #ff6f61);
+    color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2rem;
+}

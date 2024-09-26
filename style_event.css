@@ -1,0 +1,256 @@
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #f5f0ea;
+    margin: 0;
+    padding: 0;
+    color: #4a3933;
+    scroll-behavior: smooth;
+}
+
+/* Header Section */
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 60px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-top: 100px;
+    text-align: center;
+    z-index: 2;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+header p {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    z-index: 2;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #d4a85f;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 2;
+}
+
+.cta-button:hover {
+    background-color: #8c564b;
+    transform: translateY(-3px);
+}
+
+/* Parallax Section */
+.parallax {
+    background-image: url('images/bundelkhand-landscape.jpg');
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: sepia(20%);
+}
+
+#folk-dances {
+    background-color: #f5f0ea;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#folk-dances .dance-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#folk-dances .dance-item {
+    flex: 1 1 30%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#folk-dances .dance-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#folk-dances h2 {
+    color: #d4a85f;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+
+/* Carousel */
+.carousel {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px 0;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #d4a85f;
+    font-size: 24px;
+}
+
+.slick-slide img {
+    border: 2px solid #d4a85f;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Thank You Section */
+#thank-you {
+    background-color: #d4a85f;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+    border-top: 2px solid #8c564b;
+    background-image: url('images/thank-you-pattern.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#thank-you p strong {
+    font-size: 22px;
+    color: #4a3933;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    .carousel {
+        width: 95%;
+    }
+}
+#folk-music {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#folk-music .music-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+#folk-music .music-description {
+    flex: 1;
+    margin-left: 20px;
+}
+
+#folk-music .music-img {
+    flex: 1;
+    max-width: 45%;
+    border-radius: 10px;
+}
+
+#folk-music h2 {
+    color: #4a3933;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+#folk-music h3 {
+    color: #d4a85f;
+    font-size: 28px;
+}
+
+#cuisines {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#cuisines .cuisine-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#cuisines .cuisine-item {
+    flex: 1 1 30%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#cuisines .cuisine-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#cuisines h2 {
+    color: #4a3933;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+
+
+</style>
