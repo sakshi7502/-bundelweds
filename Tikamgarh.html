@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Page</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e7f3fe;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0056b3, #009688);
+            color: white;
+            position: relative;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden; 
+            animation: fadeIn 1s ease-in-out;
+            background-size: 200% 200%;
+            animation: backgroundAnimation 10s ease infinite;
+        }
+        .header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+            letter-spacing: 2px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .all-services-button {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        }
+        .all-services-button a {
+            padding: 12px 20px;
+            background-color: rgba(40, 167, 69, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .all-services-button a:hover {
+            background-color: rgba(40, 167, 69, 1);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        .header p {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .destination {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; 
+            transition: transform 0.3s;
+        }
+        .destination:hover {
+            transform: translateY(-5px);
+        }
+        .destination img {
+            max-width: 300px;
+            border-radius: 10px 0 0 10px;
+            transition: transform 0.3s;
+        }
+        .destination img:hover {
+            transform: scale(1.1);
+        }
+        .destination-details {
+            flex: 1;
+            padding: 20px;
+        }
+        .destination-details h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #0056b3;
+            border-bottom: 2px solid #e7f3fe;
+            padding-bottom: 10px;
+        }
+        .destination-details p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+        .location-features {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .location-features h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
+        .location-features iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .important-instruction {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff3cd;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .important-instruction h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #e03c31;
+        }
+        .important-instruction p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .destination {
+                flex-direction: column;
+            }
+            .destination img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Explore Beautiful Tikamgarh</h1>
+    <p>Discover the rich culture and stunning landscapes of Tikamgarh.</p>
+    <div class="all-services-button">
+        <a href="services.html">All Services</a>
+ 
+    </div>
+</div>
+
+<div class="container">
+    <div class="destination">
+        <img src="Khajuraho.jpeg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Kundeshwar</h2>
+            <p>Kundeshwar is a famous temple dedicated to Lord Shiva, situated on the banks of the Jamdhar River. The temple complex is serene, surrounded by natural beauty and a holy river, making it a popular pilgrimage spot.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: 5 km from Tikamgarh, Madhya Pradesh.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7247.2777207125!2d78.82762253756029!3d24.739275706233805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39784f6410813c57%3A0xea9badf7c865130c!2sKundeshwar%2C%20Tikamgarh%2C%20Madhya%20Pradesh%20472001!5e0!3m2!1sen!2sin!4v1726844996352!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Raneh.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Baladevgarh</h2>
+            <p>A town known for its ancient temples, particularly the Baladeoji Temple, which has historical and architectural significance. The area is rich in heritage and history, with peaceful surroundings.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Near Tikamgarh, Madhya Pradesh.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28986.537268005595!2d79.04368029652923!3d24.75031261586467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39786906779ca98b%3A0x74b8308fefa42cb5!2sBaldevgarh%2C%20Madhya%20Pradesh%20472111!5e0!3m2!1sen!2sin!4v1726845062520!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Matangeshwar.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Aharji (Aharji Jain Temple)</h2>
+            <p>Aharji is a Jain pilgrimage center, known for its peaceful environment and stunning temple architecture. The site is dedicated to Lord Adinath and holds religious importance.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>:  Near Tikamgarh, Madhya Pradesh.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.6366617885533!2d78.98810882406332!3d24.739351150095434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397842594eac514f%3A0x2e095d825938783a!2sAharji%20Jain%20Teerth!5e0!3m2!1sen!2sin!4v1726845104986!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Kalinjar.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Madkhera</h2>
+            <p>Madkhera is a small town known for the ancient Shiva Temple located by the river. It’s a quiet and spiritual destination, with natural beauty around.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: About 20 km from Tikamgarh.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28959.448851216315!2d78.77412034681281!3d24.86620247458958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397837d49e800f2d%3A0x25e510b7144cd108!2sMadkhera%2C%20Madhya%20Pradesh%20472339!5e0!3m2!1sen!2sin!4v1726845143512!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Gulganj.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Papora Ji (Jain Temple)</h2>
+            <p>APapora Ji is a Jain pilgrimage site that attracts devotees due to its peaceful atmosphere and beautiful temples. The place is associated with ancient Jain traditions and is well-maintained.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Near Tikamgarh, Madhya Pradesh.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.4876109012753!2d78.85318432406228!3d24.710134701258728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39784f5e102cdb23%3A0x4e2e5f10f6be17e1!2sPaporaji%20Digambar%20Jain%20Atishay%20Kshetra!5e0!3m2!1sen!2sin!4v1726845203884!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Bhagwan.jpeg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Umri</h2>
+            <p>Umri is known for its natural beauty and ancient heritage. It has religious significance and a serene, rural charm.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Near Tikamgarh, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29042.1265733258!2d78.94498024594775!3d24.51088265070725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39785f7062a0d9a3%3A0xf8b0087e14356738!2sUmri%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1726845282185!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Kandariya.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Orchha Fort</h2>
+            <p>Orchha Fort is a magnificent historical fort built by the Bundela rulers in the 16th century. The fort complex includes palaces, temples, and gardens, offering breathtaking views and a regal atmosphere.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>:  Orchha, Tikamgarh, Madhya Pradesh.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.615514531938!2d78.64012767408683!3d25.35067982546939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3977785eaaaaaaab%3A0xad980cf18cd2ffbe!2sOrchha%20Fort!5e0!3m2!1sen!2sin!4v1726845324026!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Chaturbhuj.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Chaturbhuj Temple</h2>
+            <p>The Ram Raja Temple is a unique temple where Lord Rama is worshipped as a king. The temple is both a spiritual and architectural marvel.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Orchha, Tikamgarh, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.666095484089!2d78.63792602408675!3d25.34898327553845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397778918b1fafcf%3A0xc7e76ce15cc87c78!2sChaturbhuj%20Temple%20Orchha!5e0!3m2!1sen!2sin!4v1726845361891!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Lakshmana.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Jahangir Mahal</h2>
+            <p>Jahangir Mahal is a palace in Orchha built by Raja Bir Singh Deo to honor Emperor Jahangir. It boasts grand Mughal architecture and royal charm.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Orchha, Tikamgarh, Madhya Pradesh.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.611250984596!2d78.64152537408687!3d25.350822825463524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397778903fe6a7c5%3A0x59cd34b2349ad665!2sJahangir%20Mahal%20Orchcha!5e0!3m2!1sen!2sin!4v1726845394942!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Lakshmana.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Raj Mahal</h2>
+            <p>The Raj Mahal is another palace in Orchha, known for its grandeur and intricate frescoes. It was once the residence of the Bundela kings and is steeped in history.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Orchha, Tikamgarh, Madhya Pradesh.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.6321868734576!2d78.6408006740868!3d25.350120625492174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397778904afbb3bb%3A0x49b629e2d57b5962!2sRaj%20Mahal%20Palace%2C%20Orchha%2C%20Madhya%20Pradesh%20472246!5e0!3m2!1sen!2sin!4v1726845436764!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Lakshmana.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Chhatris (Cenotaphs)</h2>
+            <p>The Chhatris of Orchha are cenotaphs built to honor the Bundela rulers. These grand structures are located by the Betwa River and are known for their beautiful architectural design.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Orchha, Tikamgarh, Madhya Pradesh.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.8041048325135!2d78.63538672408657!3d25.344353725726894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3977789442dece81%3A0x15794d9b7d200b3!2sThe%20Royal%20Chhatris!5e0!3m2!1sen!2sin!4v1726845485149!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+
+ <div class="IMPORTANT INSTRUCTION">
+        <h3>IMPORTANT INSTRUCTION:</h3>
+          <p>Organizing Wedding & Pre-Wedding Shoots in These Locations:</P>
+<p>1.Permissions:</p>
+      <p>Ensure you acquire permissions from the authorities or committees governing these historic or religious sites. Some locations may have restrictions, particularly regarding large gatherings.</p>
+<p>2.Logistics:</p>
+<p> o Travel: Khajuraho has its own airport, with regular flights connecting to major Indian cities. Alternatively, Chhatarpur is well connected by road and rail.</p>
+ </p>o Accommodation: Khajuraho has a variety of luxury hotels, heritage resorts, and budget stays that can cater to wedding parties and guests.</p>
+<p>o Vendors: For wedding or pre-wedding setups, there are numerous local wedding planners, photographers, and caterers available, especially around Khajuraho, as it is a popular tourist spot
+</p>
+            </div>
+</div>
+
+</body>
+</html>

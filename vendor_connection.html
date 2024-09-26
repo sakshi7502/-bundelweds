@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_vendor_connection.css">
+    <title>Vendor Booking Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Connect with Wedding Vendors</h1>
+        <form id="vendor-form">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="weddingDate">Wedding Date:</label>
+            <input type="date" id="weddingDate" name="weddingDate" required>
+
+            <label for="guestCount">Number of Guests:</label>
+            <input type="number" id="guestCount" name="guestCount" min="1" required>
+
+          
+            <label for="servicesRequired">Services Required:</label>
+            <textarea id="servicesRequired" name="servicesRequired" placeholder="Describe your requirements..." rows="4" required></textarea>
+
+            <button type="submit">Connect with Vendors</button>
+        </form>
+        <div id="message" class="hidden"></div>
+    </div>
+
+    <script src="script1_vendor_connection.js"></script>
+</body>
+</html>

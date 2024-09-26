@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Website</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <!-- Video background -->
+        <video autoplay muted loop playsinline class="video-background">
+            <source src="{{ url_for('static', filename='wedvid.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+
+        <!-- Navigation menu -->
+        <nav>
+            <a href="about.html">About Us</a>
+            <a href="destination.html">Destinations</a>
+            <a href="Events.html">Events</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login1.html">Login</a>
+           </nav>
+
+        <!-- Header title with language switch -->
+        <h3>
+            <span id="title-en">बुंदेलखंड: जहां इतिहास की धरोहरें जीवंत होती हैं</span><br>
+            <span id="title-other" style="display:none;">"Bundelkhand: Where the Heritage of History Comes Alive"</span>
+        </h3>
+    </header>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <h1>Welcome to Our Destination Wedding Website</h1>
+        <p>Explore beautiful destinations and plan your perfect trip with us.</p>
+
+        <div class="featured-images">
+            <img src="Kalinjar.jpg" alt="Destination 1">
+            <img src="121.jpg" alt="Destination 2">
+            <img src="122.jpeg" alt="Destination 3">
+        </div>
+    </div>
+
+    <script src="script_home.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tourism Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

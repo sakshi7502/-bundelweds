@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Page</title>
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e7f3fe;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0056b3, #009688);
+            color: white;
+            position: relative;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden; 
+            animation: fadeIn 1s ease-in-out;
+        }
+        .header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+            letter-spacing: 2px;
+            animation: slideIn 1s ease-in-out;
+        }
+        .all-services-button {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        }
+        .all-services-button a {
+            padding: 12px 20px;
+            background-color: rgba(40, 167, 69, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .all-services-button a:hover {
+            background-color: rgba(40, 167, 69, 1);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+        .header p {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .header {
+            background-size: 200% 200%;
+            animation: backgroundAnimation 10s ease infinite;
+        }
+
+        .destination {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; 
+            transition: transform 0.3s;
+        }
+        .destination:hover {
+            transform: translateY(-5px);
+        }
+        .destination img {
+            max-width: 300px;
+            border-radius: 10px 0 0 10px;
+            transition: transform 0.3s;
+        }
+        .destination img:hover {
+            transform: scale(1.1);
+        }
+        .destination-details {
+            flex: 1;
+            padding: 20px;
+        }
+        .destination-details h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #0056b3;
+            border-bottom: 2px solid #e7f3fe;
+            padding-bottom: 10px;
+        }
+        .destination-details p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+        .location-features {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .location-features h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
+        .location-features iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .important-instruction {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff3cd;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .important-instruction h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #e03c31;
+        }
+        .important-instruction p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .destination {
+                flex-direction: column;
+            }
+            .destination img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Explore Beautiful Damoh</h1>
+    <div class="all-services-button">
+        <a href="services.html">All Services</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="destination">
+        <img src="Khajuraho.jpeg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Jatashankar Mandir</h2>
+            <p>This temple is dedicated to Lord Shiva and is surrounded by natural caves, giving it a serene and spiritual ambiance. The temple is nestled among hills, making it a peaceful pilgrimage spot..</p>
+            <p>Discover temples, palaces, and memorials within this majestic complex that takes you back to the grandeur of India's rich history.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Located in the Patharia region of Damoh district</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.8646555616688!2d79.44609597402938!3d23.82341138597191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982019f437132f9%3A0xa9095172a7adb730!2sJatashankar%20Mandir!5e0!3m2!1sen!2sin!4v1726820568627!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Raneh.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Queen Damayanti Museum and Fort</h2>
+            <p>This historic fort and museum are associated with Queen Damayanti, a legendary figure in Indian mythology. The site includes a small museum showcasing local artifacts and a fort that holds historical importance in the region.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Situated within Damoh town.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.6617008860367!2d79.43951117402965!3d23.830625985694287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39820109816a0bfd%3A0x8afe121a1933b280!2sQueen%20Damyanti%20Museum%20And%20Fort!5e0!3m2!1sen!2sin!4v1726820674100!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Matangeshwar.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Balatal Pond</h2>
+            <p>Balatal Pond is a large and scenic water body surrounded by greenery, offering a serene environment perfect for leisure and photography.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>:  Situated within Damoh town</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.838835826212!2d79.44200992402938!3d23.824329335936522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398201a10f703e0b%3A0x3872df5ca5e42ebc!2sBelataal!5e0!3m2!1sen!2sin!4v1726820749020!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Kalinjar.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Hirdepur Lake</h2>
+            <p>This is a large and scenic lake located amidst lush greenery, offering peaceful surroundings and panoramic views.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Around 25 km from Damoh town.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.8721851452124!2d79.42309097402935!3d23.82314368598228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398201ab2deeaff1%3A0x8c9b75ba116b996!2sHirdepur%20Lake!5e0!3m2!1sen!2sin!4v1726820793386!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Gulganj.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Clock Tower Circuit</h2>
+            <p>The Clock Tower is a historical monument and a well-known landmark in Damoh. It is located at the center of town and serves as a hub for local activities.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Situated in the heart of Damoh town.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5239098917177!2d79.43781907402978!3d23.835522985505538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982010eef1cc0ff%3A0x1ced79d15ce1c2c6!2sClock%20Tower%20Circuit%2C%20Ghanta%20Ghar%2C%20Damoh%2C%20Madhya%20Pradesh%20470661!5e0!3m2!1sen!2sin!4v1726820850152!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Bhagwan.jpeg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Nadan Fall</h2>
+            <p>Nadan Fall is a beautiful waterfall located in the midst of a forest area, offering a refreshing and scenic landscape. It is a popular local tourist spot, especially during the monsoon season.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Around 35 km from Damoh town, near Jabera.</p>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Kandariya.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Bhadbhada Ghat</h2>
+            <p>Bhadbhada Ghat is a scenic area with waterfalls and rocky outcrops, creating a serene environment, especially after the monsoon season when the waterfalls are in full flow.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>:  Situated near Damoh town.</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.2783200039266!2d79.97391707400298!3d23.08690531392687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981ace9b4a0ebef%3A0xd48552e4658a68c0!2sBhadbhada%20Waterfall!5e0!3m2!1sen!2sin!4v1726820968382!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+ <div class="IMPORTANT INSTRUCTION">
+        <h3>IMPORTANT INSTRUCTION:</h3>
+          <p>Organizing Wedding & Pre-Wedding Shoots in These Locations:</P>
+<p>1.Permissions:</p>
+      <p>oMany of these sites, especially the temples and historical landmarks like Khajuraho and Kalinjar Fort, are protected by the Archaeological Survey of India (ASI). You’ll need to obtain special permissions for photoshoots or wedding ceremonies.</p>
+      <p> o Contact the local tourism office in Chhatarpur or Khajuraho for specific details regarding permits, fees, and regulations.</p>
+<p>2.Logistics:</p>
+<p> o Travel: Khajuraho has its own airport, with regular flights connecting to major Indian cities. Alternatively, Chhatarpur is well connected by road and rail.</p>
+ </p>o Accommodation: Khajuraho has a variety of luxury hotels, heritage resorts, and budget stays that can cater to wedding parties and guests.</p>
+<p>o Vendors: For wedding or pre-wedding setups, there are numerous local wedding planners, photographers, and caterers available, especially around Khajuraho, as it is a popular tourist spot
+</p>
+            </div>
+</div>
+
+</body>
+</html>

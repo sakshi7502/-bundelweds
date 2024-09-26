@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundelkhand Destination Wedding</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+<style>
+      /* General Styling */
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #f5f0ea;
+    margin: 0;
+    padding: 0;
+    color: #4a3933;
+    scroll-behavior: smooth;
+}
+
+/* Header Section */
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 60px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-top: 100px;
+    text-align: center;
+    z-index: 2;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+header p {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    z-index: 2;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #d4a85f;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 2;
+}
+
+.cta-button:hover {
+    background-color: #8c564b;
+    transform: translateY(-3px);
+}
+
+/* Parallax Section */
+.parallax {
+    background-image: url('images/bundelkhand-landscape.jpg');
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: sepia(20%);
+}
+
+#folk-dances {
+    background-color: #f5f0ea;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#folk-dances .dance-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#folk-dances .dance-item {
+    flex: 1 1 30%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#folk-dances .dance-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#folk-dances h2 {
+    color: #d4a85f;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+
+/* Carousel */
+.carousel {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px 0;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #d4a85f;
+    font-size: 24px;
+}
+
+.slick-slide img {
+    border: 2px solid #d4a85f;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Thank You Section */
+#thank-you {
+    background-color: #d4a85f;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+    border-top: 2px solid #8c564b;
+    background-image: url('images/thank-you-pattern.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#thank-you p strong {
+    font-size: 22px;
+    color: #4a3933;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 18px;
+    }
+
+    .carousel {
+        width: 95%;
+    }
+}
+#folk-music {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#folk-music .music-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+#folk-music .music-description {
+    flex: 1;
+    margin-left: 20px;
+}
+
+#folk-music .music-img {
+    flex: 1;
+    max-width: 45%;
+    border-radius: 10px;
+}
+
+#folk-music h2 {
+    color: #4a3933;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+#folk-music h3 {
+    color: #d4a85f;
+    font-size: 28px;
+}
+
+#cuisines {
+    background-color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#cuisines .cuisine-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#cuisines .cuisine-item {
+    flex: 1 1 30%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#cuisines .cuisine-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#cuisines h2 {
+    color: #4a3933;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+    <!-- Header Section with Video -->
+    <header>
+        <video autoplay muted loop>
+            <source src="wedvid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <h1>Discover the Rich Heritage of Bundelkhand</h1>
+        <p>Immerse yourself in the vibrant culture and traditions of Bundelkhand for your perfect destination wedding.</p>
+        <a href="#contact" class="cta-button">Plan Your Wedding</a>
+    </header>
+
+    <!-- Parallax Section -->
+    <div class="parallax"></div>
+
+    <!-- Cultural Events Section -->
+    <section id="cultural-events">
+        <h2>Cultural Events of Bundelkhand</h2>
+        <p>Bundelkhand offers a rich tapestry of culture and heritage that creates the perfect backdrop for an unforgettable wedding experience.</p>
+
+        <!-- Image Carousel -->
+        <div class="carousel">
+            <div><img src="https://lh7-us.googleusercontent.com/mQumhUhC3J5to6u6PaXfazkmLQyW00M9AzI3Zx0UyY8v7geeG6PqK16daQYBO7m2fA4VLe18fU5hKO67x5CHtMjdUC0p9U88o_BtyT6jR7WjmvwAOuotKFLmfp8Cgbf1Vr6kMVaOFGIF1rFKOHZvZmU" alt="Khajuraho Dance Festival"></div>
+            <div><img src="https://sadiastiffinservice.ca/cdn/shop/articles/Tiffin_Service_in_Toronto_9b74f1ae-c0fb-4be2-81a7-c7fa764026dd.jpg?v=1663778425/" alt="Cuisine"></div>
+            <div><img src="https://www.hinduamerican.org/wp-content/uploads/2021/06/sindoor.jpg" alt="Wedding Customs"></div>
+            <div><img src="https://static.toiimg.com/thumb/msid-81287921,width-1280,height-720,resizemode-4/81287921.jpg" alt="Folk Performance"></div>
+            <div><img src="https://media1.thrillophilia.com/filestore/8xldcch3k5p4q8b86qdijwajlfwu_1533280009_shutterstock_770035360.jpg" alt="Heritage Venue - Orchha Fort"></div>
+        </div>
+    </section>
+
+      <!-- Folk dances -->
+ <section id="folk-dances">
+    <h2>Vibrant Folk Dances of Bundelkhand</h2>
+    <p>Bundelkhand’s folk dances reflect the rhythm of life, the celebration of culture, and the beauty of traditions passed through generations.</p>
+    
+    <div class="dance-gallery">
+        <div class="dance-item">
+            <img src="https://en.gaonconnection.com/wp-content/uploads/2024/05/360490-screenshot-438.webp" alt="Rai Dance">
+            <h3>Rai Dance</h3>
+            <p>A graceful and expressive dance of Bundelkhand performed by women with their signature ankle bells (Ghungroo), telling stories of love and celebration.</p>
+        </div>
+        <div class="dance-item">
+            <img src="https://th-i.thgim.com/public/entertainment/art/9b3zlw/article25080349.ece/alternates/FREE_1200/28bgfrdiwari2jpg1" alt="Diwari Dance">
+            <h3>Diwari Dance</h3>
+            <p>This unique folk dance is performed during Diwali and showcases a joyful celebration of light, performed in synchrony with the rhythm of drums and festive songs.</p>
+        </div>
+        <div class="dance-item">
+            <img src="https://hamargoth.com/wp-content/uploads/2023/06/Tricky_formation-1-1.jpg" alt="Paanthi Dance">
+            <h3>Paanthi Dance</h3>
+            <p>Paanthi is an energetic dance performed by men, often at religious festivals, showcasing both physical strength and spiritual devotion.</p>
+        </div>
+    </div>
+</section>
+
+
+      <!-- folkmusic -->
+
+       <section id="folk-music">
+    <h2>Melodies of Bundelkhand: Folk Music</h2>
+    <p>The rich folk music of Bundelkhand is a celebration of its heritage, where stories of warriors, love, and nature are told through soulful melodies and ancient instruments.</p>
+    
+    <div class="music-content">
+        <img src="https://i.ytimg.com/vi/T7PkeGsWbQw/maxresdefault.jpg" alt="Aalha Music" class="music-img">
+        <div class="music-description">
+            <h3>Aalha: The Warrior’s Song</h3>
+            <p>Aalha is a fierce and powerful form of folk music that recounts the tales of brave warriors and heroic battles. It is traditionally performed with large drums and flutes, stirring the hearts of listeners with its intensity.</p>
+        </div>
+    </div>
+    
+    <div class="music-content">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcuOJ2REvzCX1Y4R2xZYDpjXQkm_ujJ2DWfg&s" alt="Lamtera Music" class="music-img">
+        <div class="music-description">
+            <h3>Lamtera: Folk Melodies</h3>
+            <p>Lamtera music accompanies the harvest season and rural celebrations, where the beats of dholak and the rustic tunes of the flute bring communities together in joyous harmony.</p>
+        </div>
+    </div>
+</section>
+
+
+      <!-- cuisine -->
+
+    <section id="cuisines">
+    <h2>Traditional Cuisine of Bundelkhand</h2>
+    <p>Explore the rich and rustic flavors of Bundelkhand, where the cuisine reflects the simplicity and warmth of the region.</p>
+    
+    <div class="cuisine-gallery">
+        <div class="cuisine-item">
+            <img src="https://i.ytimg.com/vi/rXWMsR2K0kk/maxresdefault.jpg" alt="Baati Bharta">
+            <h3>Baati Bharta</h3>
+            <p>A signature dish of Bundelkhand, Baati Bharta consists of wheat balls served with mashed roasted vegetables and is traditionally cooked in earthen stoves.</p>
+        </div>
+        <div class="cuisine-item">
+            <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/sibyl_sunitha/Gujarati_Style_Lapsi_Recipe_Millet_Sweet_Pudding_.jpg" alt="Lapsi">
+            <h3>Lapsi</h3>
+            <p>A sweet dish made from broken wheat, cooked with ghee, sugar, and spices, Lapsi is a favorite at festivals and weddings in Bundelkhand.</p>
+        </div>
+        <div class="cuisine-item">
+            <img src="https://www.archanaskitchen.com/images/archanaskitchen/0-Affiliate-Articles/Bhutte_Ka_Kees_Recipes_Savory_Corn_Pudding-4.jpg" alt="Bhutte Ka Kees">
+            <h3>Bhutte Ka Kees</h3>
+            <p>A popular monsoon delicacy, Bhutte Ka Kees is a savory corn-based dish flavored with spices and cooked with milk, offering a taste of rural Bundelkhand.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Interactive Map Section -->
+    <section>
+        <h2>Explore Bundelkhand</h2>
+        <div id="map"></div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section id="thank-you">
+        <h2>Thank You!</h2>
+        <p>We are grateful for your presence and love. Whether in person or from afar, your support adds joy to our special day.</p>
+        <p><strong>bundelweds</strong></p>
+    </section>
+
+    <!-- JavaScript for Carousel and Map -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Initialize Slick Carousel
+        $('.carousel').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+        });
+
+        // Initialize Google Map
+        function initMap() {
+            var bundelkhand = { lat: 24.8502, lng: 78.8326 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 7,
+                center: bundelkhand,
+                styles: [
+                    {
+                        "featureType": "all",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            { "color": "#f5f0ea" }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            { "color": "#d4a85f" }
+                        ]
+                    }
+                ]
+            });
+            var marker = new google.maps.Marker({
+                position: bundelkhand,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap">
+    </script>
+
+</body>
+</html>

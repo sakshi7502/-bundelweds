@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Page</title>
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e7f3fe;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0056b3, #009688);
+            color: white;
+            position: relative;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden; 
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+            letter-spacing: 2px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .all-services-button {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        }
+
+        .all-services-button a {
+            padding: 12px 20px;
+            background-color: rgba(40, 167, 69, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .all-services-button a:hover {
+            background-color: rgba(40, 167, 69, 1);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .destination {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; 
+            transition: transform 0.3s;
+        }
+        .destination:hover {
+            transform: translateY(-5px);
+        }
+        .destination img {
+            max-width: 300px;
+            border-radius: 10px 0 0 10px;
+            transition: transform 0.3s;
+        }
+        .destination img:hover {
+            transform: scale(1.1);
+        }
+        .destination-details {
+            flex: 1;
+            padding: 20px;
+        }
+        .destination-details h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #0056b3;
+            border-bottom: 2px solid #e7f3fe;
+            padding-bottom: 10px;
+        }
+        .destination-details p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+        .location-features {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .location-features h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
+        .location-features iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .important-instruction {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff3cd;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .important-instruction h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #e03c31;
+        }
+        .important-instruction p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .destination {
+                flex-direction: column;
+            }
+            .destination img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Explore Beautiful Panna</h1>
+    <div class="all-services-button">
+       <a href="services.html">All Services</a>
+ 
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="destination">
+        <img src="Khajuraho.jpeg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Pandav Caves and Fall</h2>
+            <p>Named after the Pandavas from the epic Mahabharata, these caves are situated amidst scenic waterfalls and lush greenery. The natural setting of the waterfalls, combined with the ancient rock-cut caves, makes it a magical spot for pre-wedding shoots. The serene ambiance and the sound of flowing water add an enchanting touch to photography.</p>
+           </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Around 12 km from Panna, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.8891020950127!2d80.06397807406303!3d24.73068725044055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982fd11c36dab53%3A0xe251f5ae8bcd554b!2sPandav%20Caves%20and%20Fall!5e0!3m2!1sen!2sin!4v1726843789119!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Raneh.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Brihaspati Kund</h2>
+            <p>Brihaspati Kund is a hidden natural gem, a deep canyon formed by the Ken River, surrounded by high cliffs and a natural pool at the bottom. The dramatic landscape, rugged rock formations, and natural beauty make it an ideal location for pre-wedding photoshoots. The isolated setting provides a tranquil environment for couples seeking a unique and adventurous backdrop.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Around 25 km from Panna, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.623275938857!2d80.48200857406731!3d24.842553695976324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39836ce36210b275%3A0x3f66dd36d1ad6c0b!2sBrihaspati%20Kund!5e0!3m2!1sen!2sin!4v1726843883048!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Matangeshwar.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Panna National Park</h2>
+            <p>UNESCO Biosphere Reserve, Panna National Park is known for its diverse wildlife, including tigers, leopards, and various bird species. The lush forest, river views, and wildlife safaris create a perfect nature-themed location for pre-wedding shoots. With special permissions, couples can capture the stunning natural beauty of the park, offering a unique, wild backdrop for photoshoots.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>:  Panna, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.9630680581927!2d79.93907687405772!3d24.590470756010397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982f8521c25f015%3A0x9e2d81333c4008c6!2sPanna%20National%20Park!5e0!3m2!1sen!2sin!4v1726843920926!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Kalinjar.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Prannath Ji Museum</h2>
+            <p>This museum is dedicated to Mahamati Prannath Ji, a revered spiritual leader, and showcases artifacts related to his life. The peaceful and spiritual ambiance makes it a good spot for intimate wedding ceremonies or small pre-wedding shoots with a religious or cultural theme.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Panna, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.057593284872!2d80.18366597406283!3d24.724902950670845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3983037ff2846fe5%3A0x85727b50d5d3827a!2sPrannath%20Ji%20Museum!5e0!3m2!1sen!2sin!4v1726843970035!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Gulganj.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Jugal Kishore Temple</h2>
+            <p>A One of the oldest and most revered temples in Panna, dedicated to Lord Krishna, Jugal Kishore Temple has a rich history and cultural significance. Its traditional architecture and sacred surroundings provide a beautiful setting for cultural or religious wedding and pre-wedding ceremonies.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Panna, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.115076847963!2d80.18670547406276!3d24.722929250749555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39830486b76a0f8f%3A0x9e63ef3a3ba68a5!2sJugal%20Kishore%20Temple!5e0!3m2!1sen!2sin!4v1726844020231!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Bhagwan.jpeg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Baldev Ji Mandir</h2>
+            <p>This temple, dedicated to Baldev Ji (another form of Lord Krishna), is a beautiful example of traditional Hindu architecture. It is ideal for religious-themed wedding or pre-wedding shoots, with its serene atmosphere and spiritual significance. The intricate carvings and peaceful surroundings make it a charming spot for photography.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Panna, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.2368478763133!2d80.1891379740626!3d24.718747750915952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3983047ed49981a5%3A0x63ff864ec6368fe3!2sBaldev%20Ji%20Mandir!5e0!3m2!1sen!2sin!4v1726844061680!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Kandariya.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Panna Tiger Safari (Raneh Falls Safari)</h2>
+            <p>The Panna Tiger Reserve offers an adventurous and unique opportunity for wildlife and nature lovers. The Raneh Falls safari within the reserve provides an extraordinary landscape with waterfalls, deep canyons, and sightings of wildlife. Couples who want a rugged, wild, and adventurous theme for their pre-wedding shoot will find this safari to be an exciting choice. The striking red and brown rocks of the canyon provide a dramatic backdrop for photoshoots.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>:  Near Panna National Park, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.491906004442!2d80.17030057406228!3d24.70998715126466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398303fbe99b014f%3A0x578550cbf4cc942f!2sPanna%20Tiger%20Safari!5e0!3m2!1sen!2sin!4v1726844145392!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Chaturbhuj.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Ram Janki Mandir</h2>
+            <p>This temple, dedicated to Lord Ram and Sita, is a peaceful religious site with beautiful architecture. It is a great location for couples who want a simple, traditional, and spiritual theme for their wedding or pre-wedding shoot. The quiet surroundings provide a calm, serene environment for photography.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Panna, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.0547593332967!2d80.18754697406281!3d24.72500025066703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398304807d6ebcad%3A0x6c70ae735b4b5c27!2sShri%20Ram%20Janki%20Mandir!5e0!3m2!1sen!2sin!4v1726844192044!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Lakshmana.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Ajaygarh Fort</h2>
+            <p>Perched on a hilltop, Ajaygarh Fort offers panoramic views of the surrounding landscape. The fort, with its ruined walls and ancient history, provides a dramatic and rustic background for pre-wedding photoshoots. The climb up to the fort also adds an element of adventure, making it ideal for couples seeking a historical and bold backdrop for their photography.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Around 35 km from Panna, Madhya Pradesh</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.100584880809!2d80.2625593740693!3d24.894550443895017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398319e6bf043b1b%3A0xf80de0bf5abb0fed!2sAjaygarh%20fort!5e0!3m2!1sen!2sin!4v1726844228590!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+ <div class="IMPORTANT INSTRUCTION">
+        <h3>IMPORTANT INSTRUCTION:</h3>
+          <p>Organizing Wedding & Pre-Wedding Shoots in These Locations:</P>
+<p>1.Permissions:</p>
+      <p>oo	For heritage and protected sites such as Ajaygarh Fort, temples, and museums, it is essential to obtain permissions from the local authorities, the Archaeological Survey of India (ASI), or the temple committees.
+<p> o o	Panna National Park requires special permission for photography or wedding-related activities, especially in protected or wildlife-rich areas. It’s best to contact the forest department or the local tourism office for information on fees and regulations.</p>
+<p>2.Logistics:</p>
+<p> o Travel: Khajuraho has its own airport, with regular flights connecting to major Indian cities. Alternatively, Chhatarpur is well connected by road and rail.</p>
+ </p>o Accommodation: Khajuraho has a variety of luxury hotels, heritage resorts, and budget stays that can cater to wedding parties and guests.</p>
+<p>o Vendors: For wedding or pre-wedding setups, there are numerous local wedding planners, photographers, and caterers available, especially around Khajuraho, as it is a popular tourist spot
+</p>
+            </div>
+</div>
+
+</body>
+</html>

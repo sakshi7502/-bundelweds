@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wedding Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        .header {
+            background-color: #e85a4f;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .contact-section {
+            width: 80%;
+            margin: 50px auto;
+            display: flex;
+            justify-content: space-between;
+            background-color: white;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 40px;
+        }
+
+        .contact-form {
+            width: 60%;
+        }
+
+        .contact-form h2 {
+            color: #e85a4f;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #e85a4f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #c74e3c;
+        }
+
+        .contact-info {
+            width: 35%;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info h3 {
+            color: #e85a4f;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #e85a4f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .map {
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-section a {
+            color: #e85a4f;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .social-media a:hover {
+            color: #e85a4f;
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .contact-form, .contact-info {
+                width: 100%;
+            }
+
+            .footer-section {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+            // Validate Full Name 
+            const name = document.getElementById('name').value.trim();
+            if (!/^[A-Za-z\s]+$/.test(name) || name.split(" ").length < 2) {
+                alert('Please enter a valid full name (at least three words).');
+                return false;
+            }
+
+            // Validate Phone Number 
+            const phone = document.getElementById('phone').value.trim();
+            if (!/^\d{10,15}$/.test(phone)) {
+                alert('Please enter a valid phone number (10 digits).');
+                return false;
+            }
+
+            // Validate Message 
+            const message = document.getElementById('message').value.trim();
+            if (message.length < 10) {
+                alert('Please enter a message with at least 10 characters.');
+                return false;
+            }
+
+            return true;          }
+    </script>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Contact Us</h1>
+    </div>
+    <br>
+    <div>
+       <img src="https://aroyaaleevent.com.au/wp-content/uploads/2021/08/destination_img1.jpg" class="center">
+    </div>
+
+    <section class="contact-section">
+        <div class="contact-form">
+            <h2>Get In Touch</h2>
+            <form action="submit_form.php" method="POST" onsubmit="return validateForm()">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h3>Our Contact Information</h3>
+            <p><strong>Phone:</strong> +123 456 7890</p>
+            <p><strong>Email:</strong> <a href="mailto:info@weddingwebsite.com">info@weddingwebsite.com</a></p>
+            <p><strong>Office Address:</strong> Sagar, MP (470001)</p>
+
+            <h3>Follow Us</h3>
+            <p><a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+
+            <div class="map">
+                <h3>Find Us On the Map</h3>
+                <iframe src="https://www.google.com/maps/place/Sagar,+Madhya+Pradesh/@23.8374638,78.6662252,12z/data=!3m1!4b1!4m6!3m5!1s0x3978d14a2cf591af:0xf446eaa2b5281370!8m2!3d23.838805!4d78.7378068!16zL20vMDNuNXlr?entry=ttu&g_ep=EgoyMDI0MDkxMS4wIKXMDSoASAFQAw%3D%3D" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a><br>
+                <a href="#">About Us</a><br>
+                <a href="#">Services</a><br>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><strong>Email:</strong> info@weddingwebsite.com</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+                <p><strong>Address:</strong> Sagar, MP (470001)</p>
+            </div>
+            <div class="footer-section social-media">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

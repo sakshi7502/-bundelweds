@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Page</title>
+    
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e7f3fe;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0056b3, #009688);
+            background-size: 200% 200%; /* Makes the gradient larger for animation */
+            color: white;
+            position: relative;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden; 
+            animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+            animation: backgroundAnimation 10s ease infinite; /* Background animation */
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            margin: 0;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+            letter-spacing: 2px;
+            animation: slideIn 1s ease-in-out; /* Slide-in animation */
+        }
+
+        .all-services-button {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        }
+
+        .all-services-button a {
+            padding: 12px 20px;
+            background-color: rgba(40, 167, 69, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .all-services-button a:hover {
+            background-color: rgba(40, 167, 69, 1);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .destination {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden; 
+            transition: transform 0.3s;
+        }
+        .destination:hover {
+            transform: translateY(-5px);
+        }
+        .destination img {
+            max-width: 300px;
+            border-radius: 10px 0 0 10px;
+            transition: transform 0.3s;
+        }
+        .destination img:hover {
+            transform: scale(1.1);
+        }
+        .destination-details {
+            flex: 1;
+            padding: 20px;
+        }
+        .destination-details h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #0056b3;
+            border-bottom: 2px solid #e7f3fe;
+            padding-bottom: 10px;
+        }
+        .destination-details p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+        .location-features {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .location-features h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
+        .location-features iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .important-instruction {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff3cd;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .important-instruction h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #e03c31;
+        }
+        .important-instruction p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .destination {
+                flex-direction: column;
+            }
+            .destination img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Explore Beautiful Chhatarpur</h1>
+    <p>Discover the rich history and stunning landscapes.</p>
+    <div class="all-services-button">
+        <a href="services.html">All Services</a>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="destination">
+        <img src="Khajuraho.jpeg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Khajuraho</h2>
+            <p>Famous for its stunning group of Hindu and Jain temples, Khajuraho is recognized as a UNESCO World Heritage site. These temples, built between 950 and 1050 AD, are renowned for their intricate carvings, especially those depicting erotic and sensuous themes. Khajuraho offers a unique architectural brilliance and spiritual ambiance, perfect for wedding shoots.</p>
+            <p>Discover temples, palaces, and memorials within this majestic complex that takes you back to the grandeur of India's rich history.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Chhatarpur District, Madhya Pradesh</p>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.315095403905!2d79.91907807406771!3d24.853085645555062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982e5f6256cca0d%3A0xc8486a38fc0b9543!2sKhajuraho%20Temple!5e0!3m2!1sen!2sin!4v1726816496515!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Raneh.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Raneh waterfalls</h2>
+            <p>Raneh Waterfalls are created by the Ken River and cascade through a deep canyon made of volcanic granite. The multicolored rock formations create an ethereal background, making it ideal for pre-wedding photoshoots. The surrounding forested area adds a natural charm to the site.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Around 20 km from Khajuraho, Chhatarpur District</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.677808076364!2d80.04868767406852!3d24.874851444684055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982e65fa7bf68b3%3A0xfed004d0233acc12!2sRaneh%20Water%20Falls!5e0!3m2!1sen!2sin!4v1726817184653!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Matangeshwar.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Matangeshwar Temple</h2>
+            <p>This is one of the oldest temples in Khajuraho, dedicated to Lord Shiva. It’s still an active place of worship, where grand Shivratri celebrations take place. The ancient stone architecture and spiritual ambiance make it a serene and beautiful location for cultural and wedding shoots.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>:  Khajuraho, Chhatarpur District</p>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.3473443680223!2d79.91906047406765!3d24.851983745599117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982e6019f5704a9%3A0x733b2731dfc84f44!2sMatangeshwar%20Temple!5e0!3m2!1sen!2sin!4v1726817369394!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Kalinjar.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Kalinjar Fort</h2>
+            <p>Kalinjar Fort is an ancient hill fort dating back to the 10th century. Known for its historical significance, it offers an adventurous and rustic background. With panoramic views, it provides excellent backdrops for pre-wedding shoots, particularly for those looking for a royal or historical theme.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Near Banda, 80 km from Khajuraho,Chhatarpur District</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7299.706178422214!2d78.7821729!3d23.8238226!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e31fa10800314f%3A0xd4bcec2af04323d9!2sKalinjar%20Fort%20Research%20Tours!5e0!3m2!1sen!2sin!4v1726817491630!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Gulganj.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Gulganj Fort</h2>
+            <p>A lesser-known but picturesque fort in the region, perfect for wedding shoots that seek a more offbeat and untouched venue. Its architecture and location offer a quiet, secluded atmosphere for intimate celebrations and photography.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Gulganj, Chhatarpur District</p>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.8064471229327!2d79.37219907406185!3d24.699179451694654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397878094951a845%3A0x1f40725b9412a4e5!2sGulganj%20Fort!5e0!3m2!1sen!2sin!4v1726817749947!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Bhagwan.jpeg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Bhagwan Parshwanath Digambar Jain Temple</h2>
+            <p>This Jain temple is part of the eastern group of temples in Khajuraho. The tranquil and pristine environment here adds a spiritual tone to wedding shoots, with intricate carvings providing a delicate backdrop for photography.</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Khajuraho, Chhatarpur District</p>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1862455.635273006!2d77.61836648929692!3d24.255462336102724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982e5e17b212ef3%3A0xc0f99291c58367bf!2sBhagawan%20Parshwanath%20Digambar%20Jain%20Mandir!5e0!3m2!1sen!2sin!4v1726817827883!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Kandariya.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Kandariya Mahadev Temple</h2>
+            <p>One of the largest and most ornate temples in Khajuraho, dedicated to Lord Shiva. The towering spire and detailed carvings make this temple one of the most sought-after locations for both weddings and pre-wedding shoots..</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>:  Khajuraho, Chhatarpur District</p>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.3167753448893!2d79.91710697406769!3d24.853028245557297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982e601f9257c41%3A0x1401b6c7685ba6b!2sKandariya%20Mahadev%20Temple!5e0!3m2!1sen!2sin!4v1726817888906!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Chaturbhuj.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Chaturbhuj Temple</h2>
+            <p>This temple is known for its towering structure and a large idol of Vishnu. Its quiet surroundings make it ideal for a peaceful and spiritual photoshoot, providing a tranquil escape from more crowded locations..</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Khajuraho, Chhatarpur District</p>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.983948644803!2d79.66713677058218!3d25.034618789261764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982b947445b12eb%3A0x8656de27593e93f7!2schaturbhuj%20temple!5e0!3m2!1sen!2sin!4v1726818076410!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+<div class="container">
+    <div class="destination">
+        <img src="Lakshmana.jpg" alt="Beautiful Place in Bundelkhand">
+        <div class="destination-details">
+            <h2>Lakshmana Temple</h2>
+            <p>Dedicated to Vishnu, this temple stands out for its artistic and architectural excellence. The intricate sculptures and grand scale of the temple make it an ideal location for elaborate wedding ceremonies and stunning photoshoots..</p>
+        </div>
+
+    </div>
+
+    <div class="location-features">
+        <h3>Location Features:</h3>
+          <p>: Khajuraho, Chhatarpur District</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.644780029159!2d79.92229197406725!3d24.84181864600564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3982e700419a7ca5%3A0x2466b7242f70eba1!2sLakshmana%20Temple!5e0!3m2!1sen!2sin!4v1726818520638!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+
+ <div class="IMPORTANT INSTRUCTION">
+        <h3>IMPORTANT INSTRUCTION:</h3>
+          <p>Organizing Wedding & Pre-Wedding Shoots in These Locations:</P>
+<p>1.Permissions:</p>
+      <p>oMany of these sites, especially the temples and historical landmarks like Khajuraho and Kalinjar Fort, are protected by the Archaeological Survey of India (ASI). You’ll need to obtain special permissions for photoshoots or wedding ceremonies.</p>
+      <p> o Contact the local tourism office in Chhatarpur or Khajuraho for specific details regarding permits, fees, and regulations.</p>
+<p>2.Logistics:</p>
+<p> o Travel: Khajuraho has its own airport, with regular flights connecting to major Indian cities. Alternatively, Chhatarpur is well connected by road and rail.</p>
+ </p>o Accommodation: Khajuraho has a variety of luxury hotels, heritage resorts, and budget stays that can cater to wedding parties and guests.</p>
+<p>o Vendors: For wedding or pre-wedding setups, there are numerous local wedding planners, photographers, and caterers available, especially around Khajuraho, as it is a popular tourist spot
+</p>
+            </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundelkhand Destination Wedding Registration</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://media1.thrillophilia.com/filestore/8xldcch3k5p4q8b86qdijwajlfwu_1533280009_shutterstock_770035360.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: block; /* Ensure scrolling */
+            min-height: 200vh; /* Create enough content to enable scrolling */
+            overflow-y: scroll;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay for contrast */
+        }
+
+        .container {
+            position: relative;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            padding: 40px;
+            width: 100%;
+            z-index: 1;
+            margin: 50px auto;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        /* Smooth slide-up animation */
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+            color: #555;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="file"], input[type="number"], select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-bottom: 20px;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="date"]:focus, select:focus {
+            border-color: #ff6b6b;
+            box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+        }
+
+        button {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        .form-section {
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .form-section i {
+            color: #ff6b6b;
+            margin-right: 8px;
+        }
+
+        /* Fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .terms {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .terms input {
+            margin-right: 10px;
+        }
+
+        .custom-checkbox {
+            cursor: pointer;
+        }
+
+        .social-media-input {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .social-media-input input {
+            flex: 1;
+        }
+
+        /* Image overlay */
+        .header-image {
+            height: 200px;
+            background: url('https://www.aurusjewels.com/cdn/shop/files/Post_Indian_wedding_rituals.png?v=1684402462') no-repeat center center/cover;
+            position: relative;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            animation: fadeInHeader 2s ease-out;
+        }
+
+        .header-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+            border-radius: 12px;
+        }
+
+        @keyframes fadeInHeader {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .header-title {
+            position: relative;
+            z-index: 2;
+            font-size: 24px;
+            color: #ff6b6b;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-image">
+        <h2 class="header-title">Bundelkhand Destination Wedding</h2>
+    </div>
+
+    <h2>User Registration</h2>
+    <form action="/register/user" method="POST">
+        <!-- Personal Information -->
+        <div class="form-section">
+            <label for="full-name"><i class="fas fa-user"></i> Full Name</label>
+            <input type="text" id="full-name" name="full_name" required>
+
+            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+            <input type="text" id="phone" name="phone_number" required>
+
+            <label for="password"><i class="fas fa-lock"></i> Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+ 
+        <button type="submit">Register as User</button>
+    </form>
+</div>
+
+</body>
+</html>

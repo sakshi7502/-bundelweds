@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        #about-us {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            background-color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .about-image {
+            width: 50%;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content {
+            padding: 30px;
+            width: 50%;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: #ffffff;
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #read-more {
+            background-color: #ffffff;
+            color: #ff7e5f;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #read-more:hover {
+            background-color: #feb47b;
+        }
+
+        #more-text {
+            font-size: 18px;
+            margin-top: 20px;
+            transition: 0.3s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <section id="about-us">
+        <div class="container">
+            <div class="about-image">
+                <img id="random-image" src="1.jpg" alt="About Us Image">
+            </div>
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>
+                   Welcome to bundelweds, your trusted guide to the most enchanting wedding and pre-wedding destinations! Whether you're dreaming of a romantic wedding venue, a scenic location for your pre-wedding photoshoot, or a serene getaway to celebrate your love, we are here to make it all happen.
+
+At bundelweds we specialize in curating unique and picturesque locations that offer the perfect blend of beauty, culture, and luxury. Our team is passionate about discovering hidden gems, from breathtaking beaches and royal palaces to lush gardens and historic forts. Whether you envision a grand celebration or an intimate ceremony, we provide personalized recommendations and expert assistance to turn your dream wedding into reality.
+
+</p>
+                <button id="read-more">Read More</button>
+                <div id="more-text" style="display:none;">
+                  Our services extend beyond just venues. We connect you with local vendors, offer travel packages, and help plan every detail of your pre-wedding experiences—from photoshoots to romantic getaways. With a focus on stress-free planning, we ensure your special day is unforgettable.
+
+Let us be a part of your love story and create memories that will last a lifetime. Welcome to bundelweds, where your dream wedding destination awaits!</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Array of image URLs
+        const images = ['1.jpg', 'wedding3.jpeg', 'wedding2.jpg','2.jpg','3.jpg','4.jpeg'];
+
+        // Function to change the image randomly
+        function changeImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            const imageElement = document.getElementById('random-image');
+            imageElement.src = images[randomIndex];
+        }
+
+        // Change image every 5 seconds
+        setInterval(changeImage, 5000);
+
+        // Show more text on button click
+        document.getElementById("read-more").addEventListener("click", function() {
+            const moreText = document.getElementById("more-text");
+            if (moreText.style.display === "none") {
+                moreText.style.display = "block";
+            } else {
+                moreText.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

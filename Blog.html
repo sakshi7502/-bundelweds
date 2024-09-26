@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A wedding blog documenting the journey of our special day.">
+    <meta name="keywords" content="wedding, blog, couple, journey, wedding tips, guestbook">
+    <title>Our Wedding Blog</title>
+    <link rel="stylesheet" href="styles.css">
+<style>
+/* General Styling */
+body {
+    font-family: 'Playfair Display', serif; /* Elegant, romantic font */
+    margin: 0;
+    padding: 0;
+    background-color: #fff7f8; /* Soft blush background */
+    color: #5b4a4d; /* Subtle romantic text color */
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-color: #ffe4e6; /* Soft pink header */
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a soft effect */
+}
+
+header h1 {
+    font-size: 48px;
+    color: #d68b8b; /* Romantic rose color */
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #d68b8b; /* Matching rose color for links */
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #a66161; /* Darker shade on hover */
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    margin: 40px 0;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+h2 {
+    color: #a66161; /* Deeper rose color for headings */
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 18px;
+    color: #5b4a4d;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Blog Post Styles */
+.blog-post {
+    background-color: #ffeef1; /* Light blush background */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.blog-post h3 {
+    color: #d68b8b;
+    margin-top: 0;
+}
+
+.blog-post a {
+    color: #a66161;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+/* Guestbook Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffeef1;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin: 10px 0;
+    color: #5b4a4d;
+    font-size: 18px;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border: 2px solid #d68b8b;
+    border-radius: 5px;
+    background-color: #fff7f8;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #5b4a4d;
+    outline: none;
+}
+
+form button {
+    background-color: #d68b8b;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #a66161;
+}
+
+/* RSVP Button */
+.button {
+    background-color: #d68b8b;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #a66161;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ffe4e6;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+    color: #5b4a4d;
+    font-size: 16px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #d68b8b;
+}
+
+footer ul li a:hover {
+    color: #a66161;
+}
+
+/* Thank You Section Styling */
+#thank-you {
+    background-color: #ffe4e6; /* Soft romantic pink background */
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid #d68b8b; /* Subtle top border */
+}
+
+#thank-you h2 {
+    font-size: 36px;
+    color: #d68b8b; /* Romantic rose color */
+    margin-bottom: 20px;
+}
+
+#thank-you p {
+    font-size: 18px;
+    color: #5b4a4d; /* Subtle romantic text color */
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+#thank-you p strong {
+    font-size: 20px;
+    color: #a66161; /* Deeper rose for signature */
+}
+
+</style>
+<script>
+// Simulating dynamic guestbook entries (in a real site, this would be server-based)
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent the form from submitting to a server
+    const guestName = document.getElementById('guestName').value;
+    const guestMessage = document.getElementById('guestMessage').value;
+
+    // Create a new guestbook entry
+    const entry = document.createElement('p');
+    entry.innerHTML = `<strong>${guestName}:</strong> ${guestMessage}`;
+    document.getElementById('guestbook-entries').appendChild(entry);
+
+    // Clear form fields
+    document.getElementById('guestName').value = '';
+    document.getElementById('guestMessage').value = '';
+});
+
+</script>
+
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Our Wedding Journey</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Our Story</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#guestbook">Guestbook</a></li>
+                
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Our Story</h2>
+        <p>From the first time we met to the moment we said 'Yes!' – join us on our journey as we prepare for the big day.</p>
+        <img src="https://synahotels.com/img/weddings/gallery/2.jpg" alt="Our love story -syna heritage hotel khajuraho">
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Wedding Blog</h2>
+
+        <!-- Blog Post -->
+        <article class="blog-post">
+            <h3>How We Met</h3>
+            <p>Once upon a time, we crossed paths at a coffee shop...</p>
+            <a href="#">Read More</a>
+        </article>
+
+        <article class="blog-post">
+            <h3>Dress Fitting Experience</h3>
+            <p>The moment I found my wedding dress...</p>
+            <a href="#">Read More</a>
+        </article>
+
+        <article class="blog-post">
+            <h3>Choosing the Perfect Venue</h3>
+            <p>After visiting several locations, we found the perfect venue for our big day!</p>
+            <a href="#">Read More</a>
+        </article>
+
+        <article class="blog-post">
+            <h3>Wedding Vendors: Who We're Working With</h3>
+            <p>From florists to caterers, here are the people making our wedding day special.</p>
+            <a href="#">Read More</a>
+        </article>
+    </section>
+
+
+
+    <!-- Guestbook Section -->
+    <section id="guestbook">
+        <h2>Guestbook</h2>
+        <form action="#" method="post">
+            <label for="guestName">Your Name:</label>
+            <input type="text" id="guestName" name="guestName" required>
+
+            <label for="guestMessage">Your Message:</label>
+            <textarea id="guestMessage" name="guestMessage" rows="4" required></textarea>
+
+            <button type="submit">Sign Guestbook</button>
+        </form>
+
+        <div id="guestbook-entries">
+            <!-- Dynamically populate this with guest messages -->
+            <p>No entries yet. Be the first to leave a message!</p>
+        </div>
+    </section>
+
+<!-- Thank You Section -->
+<section id="thank-you">
+    <h2>Thank You!</h2>
+    <p>We are so grateful for your love, support, and presence in our lives. Whether you can attend our wedding in person or send your love from afar, we appreciate every bit of joy you bring to our special day. We can't wait to celebrate this new chapter with you!</p>
+    <p>With love and gratitude,</p>
+    <p><strong>bundelweds</strong></p>
+</section>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Our Wedding Blog. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Pinterest</a></li>
+        </ul>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
